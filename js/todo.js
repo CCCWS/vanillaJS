@@ -54,5 +54,5 @@ if (getTodos !== null) {
   //값이 있다면
   const parseTodos = JSON.parse(getTodos); //stringify로 문자열로 localStorage에 저장된 값을 리스트로 바꿈
   toDos = parseTodos; //localStorage에 있던 값들을 toDos에 저장
-  parseTodos.foreach(inputTodo); // 리스트에 새로운 값을 추가하고 다시 localStorage에 저장
+  parseTodos.forEach(inputTodo); // 리스트에 새로운 값을 추가하고 다시 localStorage에 저장
 }
