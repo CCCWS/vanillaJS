@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+.hidden {
+  display: none;
+}
+
+#clock {
+  color: gray;
+  background-color: black;
+  display: inline;
+}
+
+#word {
+  background-color: aliceblue;
+  display: inline-block;
+}
+
+body {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border: 2px solid red;
+  margin: 0px;
+  padding: 0px;
+}
+
+#todoList {
+  display: inline-block;
+}
+li {
+  font-size: 20px;
+  color: black;
+  background-color: white;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px;
+  border: 0px;
+  background-color: red; /*배경 투명하게*/
+}
+
+#inputTodo {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  background-color: lightblue;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#weather {
+  font-size: 20px;
+  color: white;
+  background-color: red;
+  display: inline-block;
+}

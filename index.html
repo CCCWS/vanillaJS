@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+    <script src="js/login.js" async></script>
+    <script src="js/clock.js" async></script>
+    <script src="js/word.js" async></script>
+    <script src="js/background.js" async></script>
+    <script src="js/todo.js" async></script>
+    <script src="js/weather.js" async></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form class="hidden" id="loginForm">
+      <input type="text" placeholder="이름 입력" required maxlength="10" />
+      <!-- <input type="submit" value="로그인" /> -->
+    </form>
+
+    <h1 class="hidden" id="showId"></h1>
+
+    <h2 id="clock">Time</h2>
+
+    <form id="todoForm">
+      <input id="inputTodo" tpye="text" placeholder="Check List" required />
+    </form>
+
+    <ul id="todoList"></ul>
+
+    <br />
+
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+
+    <br />
+
+    <div id="word">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
+</html>
