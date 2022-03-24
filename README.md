@@ -90,3 +90,24 @@ navigator.geolocation.getCurrentPosition(성공시함수, 실패시함수) : 위
 .coords.latitude : 위도   
 .coords.longitude : 경도   
 fatch(url) : js에서 대신 url을 호출   
+
+
+--------------------------
+추가내용
+
+모듈화   
+login.js에서 todo.js의 함수 사용   
+받는 js와 보내는 js 둘다 html의 <script>에 type="module" 추가   
+   
+login.js   
+import { 사용할 함수 } from "./todo.js";   
+   
+todo.js   
+export { 사용할 함수 };   
+   
+css수정   
+   
+일괄삭제 버튼 추가   
+   
+모듈화를 통한 로그아웃시 todo 일괄 삭제   
+
