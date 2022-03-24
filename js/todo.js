@@ -39,7 +39,7 @@ function inputTodo(newTodoObj) {
 
 function deleteTodo(event) {
   //버튼 클릭시 삭제
-  //console.dir(event.target.parentElement.innerText); // 정보 탐색
+  console.dir(event.target.parentElement); // 정보 탐색
   const delLi = event.target.parentElement; // 삭제하고자 하는 li의 정보
   delLi.remove();
   toDos = toDos.filter((todo) => todo.id !== parseInt(delLi.id));
@@ -47,6 +47,7 @@ function deleteTodo(event) {
   //todo.id는 int형이고 delLi.id는 str이므로 형변환해줌
   saveTodos();
   //제거된 리스트는 다시 스토리지에 업로드
+  // console.dir(event.target.parentElement);
 }
 
 const getTodos = localStorage.getItem("TODOS_KEY"); //로컬스트로지에 저장된 값을 불러옴
@@ -56,3 +57,29 @@ if (getTodos !== null) {
   toDos = parseTodos; //localStorage에 있던 값들을 toDos에 저장
   parseTodos.forEach(inputTodo); // 리스트에 새로운 값을 추가하고 다시 localStorage에 저장
 }
+
+const delAllBtn = document.querySelector("#delAll"); //전체삭제
+function delAll() {
+  const ulTag = document.querySelector("ul");
+  const test = document.querySelector("li");
+  //   if (localStorage.getItem("TODOS_KEY") !== undefined) {
+  //     ulTag.parentNode.removeChild(ulTag);
+  //     localStorage.setItem("TODOS_KEY", "[]");
+  //   }
+  // while (true) {
+  //   ulTag.removeChild(test);
+  // }
+  // for (let i = 0; i < ulTag.childNodes.length; i++) {
+  //   // console.log(ulTag.childNodes[i]);
+  //   ulTag.removeChild(ulTag.childNodes[i]);
+  // }
+  while (ulTag.childNodes.length > 0) {
+    ulTag.removeChild(ulTag.firstChild);
+    localStorage.setItem("TODOS_KEY", "[]");
+    console.log(ulTag.childNodes);
+  }
+}
+
+delAllBtn.addEventListener("click", delAll);
+
+export { delAll };
